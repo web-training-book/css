@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>font-size 글자크기</title>
+        <style>
+        /*
+        font-size: <절대크기>|<상대크기>|<크기>|<백문율>
+            <절대크기>: (브라우저 지정) xx-small | x-small | small | medium | large | x-large | xx-large
+            <상대크기>: (부모 요소기준) larger | smaller
+            <크기>: (직접 지정) em과 px 많이 사용
+                em: 부모 요소 폰트의 대문자 M의 너비를 1em으로 놓고 상대적 값 계산
+                ex: 부모 요소 폰트의 소문자 x의 높이를 1ex로 놓고 상대적 값 계산
+                px: 픽셀, 모바일기기에 부적합
+                pt: 일반 문서에 많이 사용
+
+            <백분율>: (부모 요소 기준) %를 계산
+        */
+
+        h1{font-size:3em;}
+        p{font-size:1em;}
+        </style>
+    </head>
+    <body>
+        <!--
+        body 요소의 기본값 16px이 1em으로 지정됨
+        그러므로, 3em 은 48px, 1em 은 16px
+        -->
+
+        <h1>3em의 크기를 가진 제목</h1>
+        <p>1em의 크기를 가진 단락</p>
+    </body>
+</html>
