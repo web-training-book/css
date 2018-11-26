@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>font-family 글꼴</title>
+        <!--
+        [글꼴 관련 스타일]
+        글자들이 모여 이루어진 '텍스트'가 아닌 '글자'의 모양새에 관련된 스타일
+
+        font-family: <글꼴이름>[, <글꼴이름>, <글꼴이름>]
+            1. 지정한 글꼴이 없을 경우를 대비해 두 번째, 세 번째 글꼴 지정
+
+            2. 글꼴 이름에 "맑은 고딕" 처럼 공백이 포함되어있다면 큰 따옴표로 묶음
+
+            3. 구글 웹 폰트 사용하기
+            https://fonts.google.com/?subset=korean 에서 원하는 글꼴을 찾아서
+            <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+            또는
+            <style>
+            @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic');
+            </style>
+            설정후, font-family에 해당 글꼴 지정
+
+            4. 직접 웹 폰트 업로드해서 사용하기
+            웹에 적합한 글꼴 유형:
+                eot(Embedded Open type): ie8이하 버전, 모던 브라우저 지원
+                woff(Web Open Font Format): 모던 브라우저에서 지원, 용량이 가장 적음
+                ttf(Ture Type Font): 컴퓨터에서 사용하는 기본 글꼴 유형
+
+                (팁)ttf는 용량이 커서, eot와 woff로 변환해서 사용
+
+            @font-face {
+                font-family:사용자정의 글꼴이름;
+                src:url(글꼴파일 경로) format(파일유형);
+            }
+            @font-face로 글꼴 이름을 사용자 정의한 후, font-family에 지정하여 사용
+        -->
+
+        <style>
+            body {
+                font-family:"맑은 고딕", 돋움, 굴림;
+            }
+        </style>
+    </head>
+    <body>
+        <p>글꼴 지정하기</p>
+    </body>
+</html>
