@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>웹 폰트 사용하기</title>
+        <style>
+            /* 웹 폰트 정의
+            사용자 시스템(local)에서 먼저 찾고 없다면 eot 파일
+            eot 파일이 없다면 woff
+            woff 파일도 안된다면 ttf
+
+            (팁) eot 파일은 format을 따로 지정하지 않는다
+            */
+            @font-face {
+                font-family:'trana'; /* 글꼴이름 사용자정의 */
+                src: local('trana'),
+                    url('trana.eot'),
+                    url('trana.woff') format('woff'),
+                    url('trana.ttf') format('truetype');
+            }
+
+            .w-font {
+                font-family:'trana', sans-serif;
+            }
+            p {
+                font-size:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>Using Default Fonts</p>
+        <p class="w-font">Using Trana Fonts</p>
+    </body>
+</html>
