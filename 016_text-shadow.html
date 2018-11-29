@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>텍스트 그림자 효과</title>
+        <style>
+            /*
+            text-shadow: none | <가로거리><세로거리><번짐정도><색상>
+
+            가로거리: 필수, 양수값은 오른쪽, 음수값은 왼쪽
+            세로거리: 필수, 양수값은 아래쪽, 음수값은 위쪽
+            번짐정도: 기본값 0, 값이 클수록 흐릿하게 보임
+            색상: 그림자 색상, 기본값은 글자색
+
+            (주의) ie10은 rgba로 그림자 색상을 지정할 경우, 제대로 표시 못함.
+            */
+
+            .shadow1 {
+                color:orange;
+                text-shadow:1px 1px;
+            }
+            .shadow2 {
+                text-shadow:5px 5px 3px #f00;
+            }
+            .shadow3 {
+                color:#fff;
+                text-shadow:7px -7px 5px #000;
+            }
+
+            /*
+            그림자 효과를 여러개 사용하여 그래픽 처리한 듯한 효과를 만들 수 있음
+            이 때 맨 먼저 지정한 값이 텍스트 가장 가까이 표시됨.
+            */
+            .shadow4 {
+                color: #000;
+                text-shadow: 0 0 4px #ccc, 0 -5px 4px #ff3, 2px -10px 6px #fd3, -2px -15px 11px #f80, 2px -19px 18px #f20;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="shadow1">HTML5</h1>
+        <h1 class="shadow2">HTML5</h1>
+        <h1 class="shadow3">HTML5</h1>
+        <h1 class="shadow4">HTML5</h1>
+    </body>
+</html>
