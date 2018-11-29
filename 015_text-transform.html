@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>영문 대소문자 변환</title>
+        <style>
+            /*
+            이 속성은 한글에는 영향을 미치지 않고 영문자에만 적용됩니다.
+
+            text-tranform: none | capitalize | uppercase | lowercase | full-width
+
+            capitalize: 각 단어의 첫 글자를 대문자로 변환
+            uppercase: 모든 글자를 대문자로 변환
+            lowercase: 모든 글자를 소문자로 변환
+            full-width: 전각 문자로 변환
+            */
+            .trans1 {text-transform:uppercase;}
+            .trans2 {text-transform:capitalize;}
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="trans1">html</li>
+            <li class="trans1">css</li>
+            <li class="trans2">javascript</li>
+        </ul>
+    </body>
+</html>
