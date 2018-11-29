@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>텍스트에 줄 표시 또는 줄 없애기</title>
+        <style>
+            /*
+            text-docoration: none | underline | overline | line-through
+
+            none: 줄 없애기
+            underline: 밑줄
+            line-through: 취소선
+            overline: 윗줄
+
+            취소선은 기존 내용을 삭제하지 않고 새로운 내용과 비교하며 확인할 수 있다.
+            */
+            a {text-decoration:none;}
+            .edited {text-decoration:line-through;}
+        </style>
+    </head>
+    <body>
+        <h2>토마토(Tomato)</h2>
+        <p>[<a href="https://www.fitbug.com/g/Superfoods-tomatoes" target="_blank">외부 링크</a>]</p>
+        <p>토마토는 비타민A, C가 풍부한<span class="edited">과일이다.</span>채소다.</p>
+    </body>
+</html>
