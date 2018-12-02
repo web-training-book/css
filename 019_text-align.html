@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>텍스트 정렬</title>
+        <style>
+            /*
+            [글자 쓰기 방향]
+            direction: ltr | rtl
+
+            한글이나 영어처럼 왼쪽에서 오른쪽으로 쓰는 언어일 경우,
+            속성값으로 rtl을 입력해도 텍스트 표시 순서가 바뀌지 않는다.
+            (팁) 아랍어의 경우, rtl 값을 가짐
+
+            [텍스트 정렬]
+            text-align: start | end | left | right | center | justify | match-parent
+
+            start: 시작위치에 맞추어 문단 정렬(direction)
+            end: 끝 위치에 맞추어 문단 정렬(direction)
+            left: 왼쪽 정렬
+            right: 오른쪽 정렬
+            center: 가운데 정렬
+            justify: 양쪽 정렬
+            match-parent: 부모 요소를 따라 문단을 정렬
+
+            [양쪽 정렬시 공백 조절]
+            text-justify: auto | none | inter-word | distribute
+            
+            auto: 브라우저에서 자동으로 조절
+            none: 정렬하지 않음
+            inter-word: 단어 사이의 공백을 조절
+            distribute: 글자 사이의 공백을 조절
+
+            (테스트 결과) 이 속성 값에 따른 결과의 차이를 모르겠음
+            */
+
+            p {border: 1px solid #ccc;}
+            .align-left {text-align:left;}
+            .align-right {text-align:right;}
+            .align-center {text-align:center;}
+            .align-justify {text-align:justify;}
+        </style>
+    </head>
+    <body>
+        <h1>left</h1>
+        <p class="align-left">같은 어디 보는 두손을 바로 위하여서, 피고, 품으며, 역사를 힘있다. 이상이 석가는 타오르고 생생하며, 황금시대다. 이상의 가치를 맺어, 그들의 따뜻한 열매를 보라. 이상 오직 무한한 봄바람이다. 일월과 능히 천지는 행복스럽고 가치를 구하지 목숨을 뼈 품고 약동하다.</p>
+        <h1>right</h1>
+        <p class="align-right">같은 어디 보는 두손을 바로 위하여서, 피고, 품으며, 역사를 힘있다. 이상이 석가는 타오르고 생생하며, 황금시대다. 이상의 가치를 맺어, 그들의 따뜻한 열매를 보라. 이상 오직 무한한 봄바람이다. 일월과 능히 천지는 행복스럽고 가치를 구하지 목숨을 뼈 품고 약동하다.</p>
+        <h1>center</h1>
+        <p class="align-center">같은 어디 보는 두손을 바로 위하여서, 피고, 품으며, 역사를 힘있다. 이상이 석가는 타오르고 생생하며, 황금시대다. 이상의 가치를 맺어, 그들의 따뜻한 열매를 보라. 이상 오직 무한한 봄바람이다. 일월과 능히 천지는 행복스럽고 가치를 구하지 목숨을 뼈 품고 약동하다.</p>
+        <h1>justify</h1>
+        <p class="align-justify">같은 어디 보는 두손을 바로 위하여서, 피고, 품으며, 역사를 힘있다. 이상이 석가는 타오르고 생생하며, 황금시대다. 이상의 가치를 맺어, 그들의 따뜻한 열매를 보라. 이상 오직 무한한 봄바람이다. 일월과 능히 천지는 행복스럽고 가치를 구하지 목숨을 뼈 품고 약동하다.</p>
+    </body>
+</html>
