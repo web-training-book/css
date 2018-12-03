@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>넘치는 텍스트 처리</title>
+        <style>
+            /*
+            text-overflow: clip | ellipsis
+
+            clip: 넘치는 텍스트를 자름(기본값)
+            ellipsis: 말 줄임표
+
+            이 속성은 white-space 속성값이 nowrap, pre 중 하나이고,
+            overflow 속성값이 hidden, scroll, auto 중에 하나일 때만 적용됨
+            */
+
+            .content {
+                border:1px solid #ccc;
+                width:300px;
+                white-space:nowrap;
+                /* 여기까지 작성하면 넘치는 텍스트를 볼 수 있다 */
+
+                overflow:hidden; /* 넘치는 부분은 감춤 */
+                text-overflow:ellipsis; /* 말 줄임표 */
+            }
+            .content:hover {
+                overflow:visible; /* 넘치는 부분 보여줌 */
+            }
+        </style>
+    </head>
+    <body>
+        <p class="content">피는 보이는 피가 청춘의 따뜻한 인생에 부패뿐이다. 같이, 있음으로써 무엇을 보내는 구하지 되는 앞이 동산에는 봄바람이다. 이것을 예가 이상의 위하여서. 가장 품에 인생을 얼음에 그리하였는가? 풀이 우는 있는 속에서 보라. 예수는 이것은 풍부하게 듣기만 보내는 끓는 돋고, 너의 인생을 칼이다. 피어나는 노년에게서 이상의 동산에는 거친 평화스러운 것은 희망의 피다. 무엇이 소담스러운 공자는 방지하는 못할 사막이다. 찬미를 영원히 평화스러운 별과 사막이다.</p>
+    </body>
+</html>
