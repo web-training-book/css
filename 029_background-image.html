@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>배경이미지</title>
+        <style>
+            /*
+            background-image:url("이미지경로")
+
+            이미지: jpg, png, gif
+            파일경로에는 url(images/bg1.png) 처럼 따옴표 생략가능
+
+            (중요)
+            지정한 이미지가 채우려는 요소 크기보다 작을 경우,
+            해당 요소를 가득 채울때까지 가로와 세로로 반복 적용됨.
+            */
+
+            body {
+                background-image:url("images/bg1.png");
+            }
+            #area {
+                width:500px;
+                height:500px;
+                background-image:url("images/bg4.jpg");
+            }
+        </style>
+    </head>
+    <body>
+        <div id="area"></div>
+    </body>
+</html>
