@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>원형 그레디언트</title>
+        <style>
+            /*
+            radial-gradient(<모양> <크기> at <원의중심위치>, color-stop, [color-stop, ...])
+
+            1. 모양
+            ellipse: 기본값, 타원형
+            circle: 원형
+
+            2. 크기
+            closest-side: 원의중심과 가장 가까운 border까지 그라데이션 적용
+            closest-corner: 원의중심과 가장 가까운 corner까지 그라데이션 적용
+            farthest-side: 원의중심과 가장 먼 border까지 그라데이션 적용
+            farthest-corner: 기본값, 원의중심과 가장 먼 corner까지 그라데이션 적용
+
+            3. 원의중심 위치
+            초기 모던브라우저는 위치값을 가장 앞에 표시
+            위치는 가로위치 세로위치 지정
+            위치값으로 백분율과 키워드 사용
+            위치값 생략시 가로 세로 center가 기본값
+
+            가로 키워드: left, center, right
+            세로 키워드: top, center, bottom
+
+            4. color-stop
+            linear-gradient와 같음
+            */
+
+            div {
+                width:500px;
+                height:300px;
+                margin:10px;
+            }
+            .grad1 {
+                background: red;
+                background: -webkit-radial-gradient(white, yellow, red);
+                background: -moz-radial-gradient(white, yellow, red);
+                background: -o-radial-gradient(white, yellow, red);
+                background: radial-gradient(white, yellow, red);
+            }
+            .grad2 {
+                background: red;
+                background: -webkit-radial-gradient(circle, white, yellow, red);
+                background: -moz-radial-gradient(circle, white, yellow, red);
+                background: -o-radial-gradient(circle, white, yellow, red);
+                background: radial-gradient(circle, white, yellow, red);
+            }
+            .grad3 {
+                background: darkgreen;
+                background: -webkit-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+                background: -moz-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+                background: -o-radial-gradient(30% 40%, circle closest-side, white, yellow, green);
+                background: radial-gradient(circle closest-side at 30% 40%, white, yellow, green);
+            }
+            .grad4 {
+                background: darkgreen;
+                background: -webkit-radial-gradient(30% 40%, circle closest-side, white, yellow 20%, green);
+                background: -moz-radial-gradient(30% 40%, circle closest-side, white, yellow 20%, green);
+                background: -o-radial-gradient(30% 40%, circle closest-side, white, yellow 20%, green);
+                background: radial-gradient(circle closest-side at 30% 40%, white, yellow 20%, green);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>모양</h1>
+        <div class="grad1"></div>
+        <div class="grad2"></div>
+        <hr>
+        <h1>원의중심 위치과 크기</h1>
+        <div class="grad3"></div>
+        <h4>
+        <h1>color-stop</h1>
+        <div class="grad4"></div>
+    </body>
+</html>
