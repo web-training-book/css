@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>선형 그레디언트</title>
+        <style>
+            /*
+            그레디언트는 크기가 없는 이미지로 background, background-image 에서 사용
+
+            linear-gradient(<각도> | to <방향>, color-stop, [color-stop, ...]);
+
+            1. <방향: 끝나는 위치가 기준, 표준>
+                to bottom: 기본값, 아래로
+                to top: 위로
+                to left: 왼쪽으로
+                to right: 오른쪽으로
+
+                <초기 모던브라우저의 방향>
+                -webkit- : 시작위치가 기준
+                -moz- : to 키워드 사용하지 않음
+                -o- : to 키워드 사용하지 않음
+
+            2. <각도: 끝나는 위치가 기준, 표준>
+                각도의 값은 deg 를 붙여서 표헌
+                12시가 0deg로 시작해서 시계방향으로 값이 증가
+                브라우저 접두사를 붙여야 하는 초기 모던브라우저도 각도 표현은 동일
+
+            3. color-stop(색상 중지점)
+                색상이 바뀌는 지점을 color-stop 이라고 함
+                color-stop 은 색생과 위치를 지정할 수 있음
+                색상은 #16진수, rgb, rgba, 색상이름 등을 사용할 수 있음
+            */
+
+            div {
+                width:500px;
+                height:300px;
+                border-radius:10px;
+            }
+            .grad1 {
+                background: blue; /* css3 미지원 브라우저 */
+                background: -webkit-linear-gradient(left top, blue, white); /* 초기 모던브라우저 */
+                background: -moz-linear-gradient(right bottom, blue, white); /* 초기 모던브라우저 */
+                background: -o-linear-gradient(right bottom, blue, white); /* 초기 모던브라우저 */
+                background: linear-gradient(to right bottom, blue, white); /* 최신 모던브라우저 */
+            }
+            .grad2 {
+                background: #ff0000;
+                background: -webkit-linear-gradient(135deg, #ff0000, #ffffff);
+                background: -moz-linear-gradient(135deg, #ff0000, #ffffff);
+                background: -o-linear-gradient(135deg, #ff0000, #ffffff);
+                background: linear-gradient(135deg, #ff0000, #ffffff);
+            }
+
+            /*
+            아래 방향으로,
+            시작 색상은 #06f
+            중지점 색상은 요소에서 진행방향으로 30%지점에 white
+            끝 색상은 #06f
+            */
+            .grad3 {
+                background: #06f;
+                background-image: -webkit-linear-gradient(top, #06f, white 30%, #06f);
+                background-image: -moz-linear-gradient(bottom, #06f, white 30%, #06f);
+                background: -o-linear-gradient(bottom, #06f, white 30%, #06f);
+                background: linear-gradient(to bottom, #06f, white 30%, #06f);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>방향 키워드 사용</h1>
+        <div class="grad1"></div>
+        <hr>
+        <h1>각도 사용</h1>
+        <div class="grad2"></div>
+        <hr>
+        <h1>color-stop</h1>
+        <div class="grad3"></div>
+    </body>
+</html>
