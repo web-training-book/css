@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>박스모델 가로&세로 크기</title>
+        <style>
+            /*
+            웹 표준에서 width와 height는 콘텐츠 영역의 크기를 말한다.
+
+            width: auto | <크기> | <백분율>
+            height: auto | <크기> | <백분율>
+
+            auto: 기본값, 콘텐츠 양에 따라 자동조절
+            <크기>: px 또는 cm 로 직접 지정
+            <백분율>: 부모 요소를 기준으로 %로 지정
+
+            (주의)
+            박스의 너비 = width(콘텐츠영역의 가로크기) + padding + border
+            ie6의 박스 너비 = width
+                width = 콘텐츠영역의 가로크기 + padding + border
+                콘텐츠영역의 가로크기 = width - (padding + border)
+            */
+
+            div {
+                margin:10px;
+            }
+            .box1 {
+                width:200px;
+                height:100px;
+                background:#ff6a00;
+            }
+            .box2 {
+                width:50%; /* 가변 너비 - body 요소를 기준으로 계산됨 */
+                height:100px;
+                background:#0094ff;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </body>
+</html>
