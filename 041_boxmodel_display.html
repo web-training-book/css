@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>display</title>
+        <style>
+            /*
+            해당 요소가 화면에 어떻게 보일지 지정
+            display: none | block | inline | inline-block | 등등
+
+            none: 해당 요소의 공간 자체를 삭제
+            block: inline 요소를 block 요소로 지정
+            inline: block 요소를 inline 요소로 지정
+            inline-block: inline 요소처럼 배치하고, block 속성을 가짐
+
+            (중요)
+            inline 요소는 여백이나 위치 등을 지정해도 그 값이 생각처럼 적용되지 않는다.
+            정확한 박스모델를 이용하려면 block 속성을 가지고 있어야 한다.
+            */
+
+            div {
+                margin:20px;
+                border:1px solid #ccc;
+                border-radius:5px;
+            }
+            img {
+                margin:10px;
+            }
+            #block img {
+                display:block;
+            }
+
+            #inline nav ul {
+                list-style-type: none;
+            }
+            #inline nav ul li {
+                display: inline;
+            }
+            #inline nav ul li a {
+                color:black;
+                text-decoration:none;
+            }
+
+            #inline-block {
+                margin:0px;
+                border:0px;
+            }
+            #inline-block nav {
+                width:100%;
+                height:60px;
+                background-color:#069;
+            }
+            #inline-block nav ul {
+                list-style-type:none;
+            }
+            #inline-block nav ul li {
+                display: inline-block;
+                margin: 20px;
+            }
+            #inline-block nav ul li a {
+                color: white;
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>display:block</h1>
+        <div>
+            <img src="images/pic1.jpg">
+            <img src="images/pic2.jpg">
+            <img src="images/pic3.jpg">
+        </div>
+        <div id="block">
+            <img src="images/pic1.jpg">
+            <img src="images/pic2.jpg">
+            <img src="images/pic3.jpg">
+        </div>
+        <hr>
+        <h1>display:inline</h1>
+        <div id="inline">
+            <nav>
+                <ul>
+                    <li><a href="#">애완견 종류</a></li>
+                    <li><a href="#">입양하기</a></li>
+                    <li><a href="#">건강돌보기</a></li>
+                    <li><a href="#">더불어살기</a></li>
+                </ul>
+            </nav>
+        </div>
+        <hr>
+        <h1>display:inline-block</h1>
+        <div id="inline-block">
+            <nav>
+                <ul>
+                    <li><a href="#">애완견 종류</a></li>
+                    <li><a href="#">입양하기</a></li>
+                    <li><a href="#">건강돌보기</a></li>
+                    <li><a href="#">더불어살기</a></li>
+                </ul>
+                <h2>애완견 종류</h2>
+            </nav>
+        </div>
+    </body>
+</html>
