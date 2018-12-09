@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>border-radius</title>
+        <style>
+            /*
+            모서리 둥글게
+            border-radius: <크기> | <백분율>
+
+            border-top-left-radius: <크기> | <백분율>
+            border-top-right-radius: <크기> | <백분율>
+            border-bottom-right-radius: <크기> | <백분율>
+            border-bottom-left-radius: <크기> | <백분율>
+
+            타원형태로 둥글게
+            border-radius: <가로크기>/<세로크기>
+
+            border-top-left-radius: <가로크기> <세로크기>
+            border-top_right-radius: <가로크기> <세로크기>
+            border-bottom-right-radius: <가로크기> <세로크기>
+            border-bottom-left-radius: <가로크기> <세로크기>
+            */
+            div {
+                width:300px;
+                height:200px;
+                margin:20px;
+                display:inline-block;
+            }
+            .round1 {
+                border:2px solid red;
+                border-radius:20px; /* 모두 */
+            }
+            #bg {
+                background:url(images/pic1.jpg) no-repeat;
+                background-size:cover;
+            }
+
+            .round2 {
+                border:2px solid blue;
+                border-top-left-radius:20px;
+                border-top-right-radius:20px;
+            }
+            .round3 {
+                background:#0c78c8;
+                border-radius:20px 70px; /* top-left, top-right, bottom-right, bottom-left 순서 */
+            }
+
+            .round4 {
+                border:2px solid;
+                background:#ffd800;
+
+                border-top-left-radius:100px 50px;
+            }
+            .round5 {
+                border:2px solid;
+                background:#ffd800;
+
+                border-bottom-right-radius:50% 30%;
+            }
+            .round6 {
+                border:2px solid;
+                background:#ffd800;
+
+                border-radius:50px/30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="round1"></div>
+        <div class="round1" id="bg"></div>
+        <hr>
+        <div class="round2"></div>
+        <div class="round3"></div>
+        <hr>
+        <div class="round4"></div>
+        <div class="round5"></div>
+        <div class="round6"></div>
+    </body>
+</html>
