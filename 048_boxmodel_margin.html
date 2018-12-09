@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>margin</title>
+        <style>
+            /*
+            margin: <크기> | <백분율> | auto
+            margin-top, margin-right, margin-bottom, margin-left
+
+            <크기>: px이나 cm로 직접지정
+            <백분율>: 부모요소를 기준으로 %로 지정
+            auto: 자동
+
+            (참고)
+            비어있는 값은 맞은편의 값과 동일하게 적용됨
+            */
+
+            div {
+                width:200px;
+                height:100px;
+                background:#0094ff;
+            }
+            .box1 { margin:30px 50px 30px 50px; } /* 위쪽 오른쪽 아래 왼쪽 순 */
+            .box2 { margin:30px 50px;} /* 위아래 30px, 좌우 50px */
+            .box3 { margin:50px; } /* 모두 */
+            .box4 { margin:30px 5px 10px; } /* 위쪽 30px, 좌우 5px, 아래 10px */
+            .box5 { margin:0px auto; } /* 가운데 정렬 */
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+    </body>
+</html>
