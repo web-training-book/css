@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>box-shadow</title>
+        <style>
+            /*
+            그림자 효과
+            box-shadow: none | <그림자값>
+
+            <그림자값>: <수평거리> <수직거리> <흐림정도> <번짐정도> <색상> inset
+            <수평거리>: 필수값, 양수는 오른쪽, 음수는 왼쪽
+            <수직거리>: 필수값, 양수는 아래쪽, 음수는 윗쪽
+            <흐림정도>: 기본값 0px, 값이 커질수록 부드러운 그림자
+            <번짐정도>: 기본값 0px, 양수값은 그림자가 모든 방향으로 퍼지고, 음수값은 축소됨
+            <색상>: 기본값은 현재 글자색
+            inset: 안쪽 그림자(필요할 경우만 사용)
+            */
+
+            div {
+                width:200px;
+                height:100px;
+                display:inline-block;
+                margin:15px;
+                border:2px solid;
+                border-radius:20px;
+            }
+            .box1 { box-shadow:2px -2px 5px 0px black; }
+            .box2 { box-shadow:2px -2px 5px 0px black inset; }
+            .box3 { box-shadow:5px 5px 15px 5px gray; }
+        </style>
+    </head>
+    <body>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </body>
+</html>
