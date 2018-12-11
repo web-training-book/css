@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>position:relative</title>
+        <style>
+            /*
+            position: static | relative | absolute | fixed
+
+            static: 기본값, 흐름에 맞추어 배치
+            relative: static과 같으나 top, right, bottom, left 속성 사용가능 
+            absolute: 가장 가까운 조상중 position:relative 를 기준으로 top, right, bottom, left 사용
+            fixed: 브라우저의 왼쪽 상단을 기준으로 top, right, bottom, left 사용. 스크롤해도 고정됨.
+            */
+
+            div {
+                width:100px;
+                margin-bottom:10px;
+                padding:20px;
+                float:left;
+            }
+            hr {
+                clear:both;
+            }
+
+            .box1, .box3 {
+                margin-right:10px;
+                background:#ffd800;
+            }
+            .box2 {
+                background:#0094ff;
+                position:static;
+            }
+            .box4 {
+                background:#0094ff;
+                position:relative;
+                left:-50px;
+                top:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box1">박스1</div>
+        <div class="box2">박스2</div>
+        <hr>
+        <div class="box3">박스3</div>
+        <div class="box4">박스4</div>
+    </body>
+</html>
