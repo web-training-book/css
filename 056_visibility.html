@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>visibility</title>
+        <style>
+            /*
+            visibility: visible | hidden | collapse
+
+            visible: 기본값, 보임
+            hidden: 안보임, 하지만 공간은 그대로 차지함.
+            collapse: 표에서 사용, 다른 요소에서 사용하면 hidden으로 처림됨
+
+            (팁)
+            display:none; 은 공간까지 삭제함.
+            */
+
+            img {
+                margin:10px;
+                padding:5px;
+                border:1px solid black;
+            }
+            .invisible {
+                visibility:hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="images/pic1.jpg">
+        <img src="images/pic2.jpg" class="invisible">
+        <img src="images/pic3.jpg">
+    </body>
+</html>
