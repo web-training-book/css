@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>width & height</title>
+        <style>
+            /*
+            테이블과 셀에도 width, height 지정가능
+            셀에 width을 지정하지 않으면, 내용의 비율에 따라 조절됨
+            */
+            body { font-family:"맑은 고딕", "고딕", "굴림"; }
+            table {
+                border:1px solid black;
+                border-collapse:collapse;
+                width:300px;
+            }
+            td {
+                border:1px dotted black;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>프로축구 경기 일정</caption>
+            <tr>
+                <td>울산</td>
+                <td>울산 vs 부산</td>
+            </tr>
+            <tr>
+                <td>부산</td>
+                <td>부산 vs 대전</td>
+            </tr>
+            <tr>
+                <td>서울</td>
+                <td>서울 vs 강원</td>
+            </tr>
+    </body>
+</html>
