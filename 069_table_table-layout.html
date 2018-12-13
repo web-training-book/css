@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>table-layout</title>
+        <style>
+            /*
+            셀 너비 고정
+            table-layout: auto | fixed
+
+            auto: 기본값, 셀 내용에 따라 너비가 조절됨
+            fixed: 셀 너비 고정
+
+            영문을 여백없이 길게 입력할 경우,
+            td의 width 속성이 무시됨(auto) -> table-layout:fixed; 로 너비 고정시킴
+
+            셀 너비를 고정시키면,
+            셀 너비보다 긴 내용은 셀 밖으로 밀려나감 -> word-break:break-all; 로 셀안에 표시
+
+            예상하지 못한 줄바꿈을 위해 height:auto; 로 지정
+            */
+            body { font-family:"맑은 고딕", "고딕", "굴림"; }
+            table {
+                border:1px solid black;
+                border-collapse:collapse;
+
+                width:300px;
+                table-layout:fixed; /* 셀 너비 고정 */
+                word-break:break-all; /* 셀 너비보다 긴 내용도 셀 안에 표시 */
+                height:auto; /* 셀의 줄바꿈에 따라 높이 자동조절 */
+            }
+            td {
+                border:1px solid black;
+
+                width:150px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption>table-layout</caption>
+            <tr>
+                <td>한글로띄어쓰기없이길게붙여쓰기</td>
+                <td>longdescriptionwithoutspace</td>
+            </tr>
+        </table>
+    </body>
+</html>
