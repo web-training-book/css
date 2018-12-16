@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>combination selector</title>
+        <style>
+            /*
+            combination selector(컴비네이션 셀렉터): 셀렉터와 셀렉터를 조합하여 적용대상 한정
+                부모요소가 기준
+                    descendant selector(디센던트 셀렉터): 공백, 자손
+                    child selector(차일드 셀렉터): >, 자식
+                형제요소가 기준
+                    adjacent selector(어제이슨트 셀렉터): +, 첫번째동생
+                    sibling selector(시블링 셀렉터): ~, 모든동생
+            */
+
+            /* 
+            descendant selector는 셀렉터 사이에 공백으로 구분
+            부모 모든자손
+
+            'section1 하위의 모든 ul 요소'를 의미함
+            */
+            #section1 ul {
+                border:1px dotted blue;
+            }
+
+            /*
+            child selector는 > 기호를 사용
+            부모 > 모든자식
+
+            'section2의 모든 ul자식'를 의미함
+            */
+            #section2 > ul {
+                border:1px dotted blue;
+            }
+
+            /*
+            adjacent selector는 첫번째 동생요소를 선택한다.
+            형 + 첫번째동생
+
+            'header의 첫번째동생인 p'를 의미
+            */
+            #section3 header + p {
+                color:blue;
+                font-weight:bold;
+            }
+
+            /*
+            sibling selector는 모든 동생을 선택한다.
+            형 ~ 모든동생
+
+            'p의 모든 ul동생을 의미'
+            */
+            #section4 p ~ ul {
+                color:blue;
+                font-weight:bold;
+            }
+        </style>
+    </head>
+    <body>
+        <section id="section1">
+            <header>
+                <h1>예약방법 및 요금</h1>
+            </header>
+            <p>요안도라에 예약하려면?</p>
+            <ul>
+                <li>예약방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>요금
+                    <ul>
+                        <li>1인: 40,000원</li>
+                        <li>2인: 60,000원</li>
+                        <li>3인: 80,000원</li>
+                        <li>4인: 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="section2">
+            <header>
+                <h1>예약방법 및 요금</h1>
+            </header>
+            <p>요안도라에 예약하려면?</p>
+            <ul>
+                <li>예약방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>요금
+                    <ul>
+                        <li>1인: 40,000원</li>
+                        <li>2인: 60,000원</li>
+                        <li>3인: 80,000원</li>
+                        <li>4인: 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+            <ul>
+                <li>예약방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>요금
+                    <ul>
+                        <li>1인: 40,000원</li>
+                        <li>2인: 60,000원</li>
+                        <li>3인: 80,000원</li>
+                        <li>4인: 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="section3">
+            <header>
+                <h1>예약방법 및 요금</h1>
+            </header>
+            <p>요안도라에 예약하려면?</p>
+            <ul>
+                <li>예약방법
+                    <ul>
+                        <li>직접 통화</li>
+                        <li>문자 남기기</li>
+                    </ul>
+                </li>
+                <li>요금
+                    <ul>
+                        <li>1인: 40,000원</li>
+                        <li>2인: 60,000원</li>
+                        <li>3인: 80,000원</li>
+                        <li>4인: 100,000원</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="section4">
+            <header>
+                <h1>예약방법 및 요금</h1>
+            </header>
+            <ul>
+                <li>더미 텍스트1</li>
+                <li>더미 텍스트2</li>
+            </ul>
+            <p>요안도라에 예약하려면?</p>
+            <ul>
+                <li>직접 통화</li>
+                <li>문자 남기기</li>
+            </ul>
+            <ul>
+                <li>1인: 40,000원</li>
+                <li>2인: 60,000원</li>
+                <li>3인: 80,000원</li>
+                <li>4인: 100,000원</li>
+            </ul>
+        </section>
+    </body>
+</html>
