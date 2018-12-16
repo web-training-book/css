@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>[속성]</title>
+        <style>
+            /*
+            [속성]: 속성이 존재할 때
+            [속성="값"] 속성의 값이 일치할 때
+            [속성|="값"] 속성의 값이 일치하거나 값-(하이픈) 형태로 되어있을때
+            [속성~="값"] 속성의 여러값중 일치하는 값이 있을 때(단어)
+            [속성^="값"] 속성의 값이 지정한 값으로 시작할 때
+            [속성$="값"] 속성의 값이 지정한 값으로 끝날때
+            [속성*="값"] 속성의 값에 지정한 값이 포함되어 있을 때
+            */
+            ul {
+                list-style:none;
+            }
+            li {
+                width:100px;
+                display:inline;
+                float:left;
+                margin:10px;
+            }
+            li a {
+                padding:5px 20px;
+                font-size:14px;
+                color:blue;
+                text-decoration:none;
+            }
+
+            [href] {
+                background:yellow;
+            }
+            a[class] {
+                background:black;
+            }
+            #anchor[href] {
+                background:gray;
+            }
+            #unorder [title] {
+                background:orange;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="unorder">
+            <li><a>메인 메뉴 : </a></li>
+            <li><a href="#">메뉴 1</a></li>
+            <li><a href="#" class="one">메뉴 2</a></li>
+            <li><a id="anchor" href="#">메뉴 3</a></li>
+            <li><a title="" href="#">메뉴 4</a></li>
+        </ul>
+    </body>
+</html>
