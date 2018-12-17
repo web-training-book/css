@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>자식위치에 따른 가상클래스</title>
+        <style>
+            /*
+            위치에 따라 요소를 찾아 스타일을 적용하는 클래스
+            nth-child(n) n번째 자식요소에 스타일 적용
+            nth-last-child(n) 뒤에서부터 n번째 자식요소에 스타일 적용
+
+            nth-of-type(n) n번째 해당 태그에 스타일 적용
+            nth-last-of-type(n) 뒤에서부터 n번째 해당 태그에 스타일 적용
+
+
+            (팁)
+            홀수: odd, 2n+1
+            짝수: even, 2n
+
+            (주의)
+            위치에 따라 스타일을 적용하는 선택자는 해당 요소들이 모두 한 부모여야 한다.
+            즉, 문서구조에서 모두 같은 레벨의 요소여야 한다.
+
+            (궁금한점)
+            table tr:nth-child(odd)는 되는데,
+            table > tr:nth-child(odd)는 안되는 이유가 궁금함.
+            */
+
+            #container {
+                text-align:center;
+                color:#2b2b2b;
+            }
+            table {
+                width:200px;
+                margin:0 auto;
+                border-collapse:collapse;
+            }
+            td {
+                text-align:left;
+                padding:10px;
+                padding-left:20px;
+            }
+            /*
+            table의 모든 자손중 홀수 요소가 tr일 경우
+            */
+            table tr:nth-child(2n+1) {
+                background:lightgray;
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <h1>건강에 좋은 건강식품</h1>
+            <table border="1">
+                <tr>
+                    <td>블루베리</td>
+                </tr>
+                <tr>
+                    <td>귀리</td>
+                </tr>
+                <tr>
+                    <td>토마토</td>
+                </tr>
+                <tr>
+                    <td>시금치</td>
+                </tr>
+                <tr>
+                    <td>적포도주</td>
+                </tr>
+                <tr>
+                    <td>견과류</td>
+                </tr>
+                <tr>
+                    <td>브로콜리</td>
+                </tr>
+                <tr>
+                    <td>연어</td>
+                </tr>
+                <tr>
+                    <td>마늘</td>
+                </tr>
+                <tr>
+                    <td>녹차</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
