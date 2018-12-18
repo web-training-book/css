@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>rotate</title>
+        <style>
+            /*
+            회전
+            transform: rotate(각도)
+
+            각도는 deg(도)와 rad(래디언) 값을 사용
+            rad는 1/180도
+            양수는 시계방향으로 회전
+            */
+            .origin {
+                width:210px;
+                height:200px;
+                border:1px solid black;
+                float:left;
+                margin:40px;
+            }
+            .rotate1:hover {
+                -webkit-transform: rotate(20deg);
+                -moz-transform: rotate(20deg);
+                -ms-transform: rotate(20deg);
+                -o-transform: rotate(20deg);
+                transform: rotate(20deg);
+            }
+            .rotate2:hover {
+                -webkit-transform: rotate(-40deg);
+                -moz-transform: rotate(-40deg);
+                -ms-transform: rotate(-40deg);
+                -o-transform: rotate(-40deg);
+                transform: rotate(-40deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="origin">
+            <div class="rotate1">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="rotate2">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+    </body>
+</html>
