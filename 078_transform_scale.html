@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>scale</title>
+        <style>
+            /*
+            확대/축소 함수
+            transform: scale(x, y)
+            transform: scale3d(x, y, z)
+            transform: scaleX(x)
+            transform: scaleY(y)
+            transform: scaleZ(z)
+
+            1보다 크면 확대, 1보다 작은면 축소
+            */
+            .origin {
+                width:210px;
+                height:200px;
+                border:1px solid black;
+                float:left;
+                margin:40px;
+            }
+            .scalex:hover {
+                -webkit-transform: scaleX(1.2);
+                -moz-transform: scaleX(1.2);
+                -ms-transform: scaleX(1.2);
+                -o-transform: scaleX(1.2);
+                transform: scaleX(1.2);
+            }
+            .scaley:hover {
+                -webkit-transform: scaleY(1.5);
+                -moz-transform: scaleY(1.5);
+                -ms-transform: scaleY(1.5);
+                -o-transform: scaleY(1.5);
+                transform: scaleY(1.5);
+            }
+            .scale:hover {
+                -webkit-transform: scale(0.7);
+                -moz-transform: scale(0.7);
+                -ms-transform: scale(0.7);
+                -o-transform: scale(0.7);
+                transform: scale(0.7);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="origin">
+            <div class="scalex">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="scaley">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="scale">
+                <img src="images/fruit.jpg">
+            </div>
+        </div>
+    </body>
+</html>
