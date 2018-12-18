@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>translate</title>
+        <style>
+            /*
+            translateX(x) x축으로 이동(양수값은 오른쪽)
+            translateY(y) y축으로 이동(양수값은 아래)
+            translate(x, y) x,y로 이동
+            */
+
+            .origin {
+                width:200px;
+                height:134px;
+                border:1px solid black;
+                float:left;
+                margin:40px;
+            }
+            .movex:hover {
+                -webkit-transform: translateX(50px);
+                -moz-transform: translateX(50px);
+                -ms-transform: translateX(50px);
+                -o-transform: translateX(50px);
+                transform: translateX(50px);
+            }
+            .movey:hover {
+                -webkit-transform: translateY(20px);
+                -moz-transform: translateY(20px);
+                -ms-transform: translateY(20px);
+                -o-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+            .movexy:hover {
+                -webkit-transform: translate(10px, 20px);
+                -moz-transform: translate(10px, 20px);
+                -ms-transform: translate(10px, 20px);
+                -o-transform: translate(10px, 20px);
+                transform: translate(10px, 20px);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="origin">
+            <div class="movex">
+                <img src="images/bus.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movey">
+                <img src="images/bus.jpg">
+            </div>
+        </div>
+        <div class="origin">
+            <div class="movexy">
+                <img src="images/bus.jpg">
+            </div>
+        </div>
+    </body>
+</html>
