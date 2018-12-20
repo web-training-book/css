@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>transition</title>
+        <style>
+            /*
+            트랜지션을 적용할 속성 지정
+            transition-property: all | none | <속성이름>
+
+            all: 기본값, 요소의 모든 속성이 트랜지션 대상이 됨
+            none: 트랜지션 동안 아무 속성도 바뀌지 않음
+            <속성이름>: 트랜지션을 적용할 속성이름 지정, 속성이 여러개일 경우 쉼표(,)로 구분
+
+            트랜지션 진행시간 지정
+            transition-duration: <시간>
+
+            시간단위는 s(초), ms(밀리초)
+            기본값은 0
+            트랜지션 대상 속성이 여러개라면 진행시간도 쉼표(,)로 순서대로 지정
+            */
+
+            .tr1 {
+                width:100px;
+                height:100px;
+                background-color:blue;
+                border:1px solid black;
+
+                -webkit-transition-property: width, height;
+                -moz-transition-property: width, height;
+                -ms-transition-property: width, height;
+                -o-transition-property: width, height;
+                transition-property: width, height;
+
+                -webkit-transition-duration: 2s, 1s;
+                -moz-transition-duration: 2s, 1s;
+                -ms-transition-duration: 2s, 1s;
+                -o-transition-duration: 2s, 1s;
+                transition-duration: 2s, 1s;
+            }
+            .tr1:hover {
+                width:200px;
+                height:120px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tr1"></div>
+    </body>
+</html>
