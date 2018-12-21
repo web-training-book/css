@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>transition-timing-function</title>
+        <style>
+            /*
+            진행속도
+            transition-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)
+
+            linear: 동일한 속도
+            ease: 기본값, 느리게-빠르게-느리게
+            ease-in: 느리게 시작
+            ease-out: 느리게 끝
+            ease-in-out: 느리게시작-느리게끝(중간에 빨라지는 느낌이 ease에 비해 약함)
+            cubic-bezier(n,n,n,n): 베지에 함수를 직접 정의
+            */
+
+            #ex div {
+                float:left;
+                width:100px;
+                height:50px;
+                margin:5px 10px;
+                padding:5px;
+                color:white;
+                background-color:#006aff;
+                border-radius:5px;
+                text-align:center;
+                font-weight:bold;
+            }
+            #ex:hover div { height:400px; }
+
+            #ex .ease {
+                -webkit-transition-duration: 3s;
+                -moz-transition-duration: 3s;
+                -o-transition-duration: 3s;
+                transition-duration: 3s;
+
+                -webkit-transition-timing-function: ease;
+                -moz-transition-timing-function: ease;
+                -o-transition-timing-function: ease;
+                transition-timing-function: ease;
+            }
+            #ex .linear {
+                -webkit-transition: 3s linear;
+                -moz-transition: 3s linear;
+                -o-transition: 3s linear;
+                transition: 3s linear;
+            }
+            #ex .ease-in {
+                -webkit-transition: 3s ease-in;
+                -moz-transition: 3s ease-in;
+                -o-transition: 3s ease-in;
+                transition: 3s ease-in;
+            }
+            #ex .ease-out {
+                -webkit-transition: 3s ease-out;
+                -moz-transition: 3s ease-out;
+                -o-transition: 3s ease-out;
+                transition: 3s ease-out;
+            }
+            #ex .ease-in-out {
+                -webkit-transition: 3s ease-in-out;
+                -moz-transition: 3s ease-in-out;
+                -o-transition: 3s ease-in-out;
+                transition: 3s ease-in-out;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="ex">
+            <div class="linear"> linear </div>
+            <div class="ease"> ease </div>
+            <div class="ease-in"> ease-in </div>
+            <div class="ease-out"> ease-out </div>
+            <div class="ease-in-out"> ease-in-out </div>
+        </div>
+    </body>
+</html>
