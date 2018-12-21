@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>transition</title>
+        <style>
+            /*
+            transition-property에서 지정한 속성의 개수와
+            transition-duration에서 지정한 진행시간의 개수가 다르다면
+            진행시간이 반복해서 적용된다.
+
+            아래 예제에서는 background-color와 transform에 각각 2s, 3s
+            width와 height에 다시 2s, 3s가 적용된다.
+            */
+
+            h1 {
+                text-align:center;
+                font-size:52px;
+            }
+            .tr1 {
+                width:100px;
+                height:100px;
+                background-color:red;
+
+                -webkit-transition-property: background-color, transform, width, height;
+                -moz-transition-property: background-color, transform, width, height;
+                -ms-transition-property: background-color, transform, width, height;
+                -o-transition-property: background-color, transform, width, height;
+                transition-property: background-color, transform, width, height;
+
+                -webkit-transition-duration: 2s, 3s;
+                -moz-transition-duration: 2s, 3s;
+                -ms-transition-duration: 2s, 3s;
+                -o-transition-duration: 2s, 3s;
+                transition-duration: 2s, 3s;
+            }
+            .tr1:hover {
+                width:200px;
+                height:200px;
+                background-color:#ff6e5f;
+
+                -webkit-transform:rotate(180deg);
+                -moz-transform:rotate(180deg);
+                -ms-transform:rotate(180deg);
+                -o-transform:rotate(180deg);
+                transform:rotate(180deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="tr1"><h1>!</h1></div>
+    </body>
+</html>
