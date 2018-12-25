@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>animation-direction</title>
+        <style>
+            /*
+            애니메이션 방향 지정
+            animation-direction: normal | alternate
+            normal: 기본값, 원래위치로 복귀
+            alternate: 반대방향으로 실행
+
+            반복 횟수 지정
+            animation-iteration-count: <숫자> | infinite
+            <숫자>: 반복횟수 지정, 기본값은 1
+            infinite: 무한반복
+
+            애니메이션 속도
+            animation-timing-function: linear | ease | ease-in | ease-out | ease-in-out | cubic-bezier(n,n,n,n)
+            */
+
+            .box {
+                margin-top: 50px;
+                margin-left: 100px;
+                padding: 20px;
+                height: 60px;
+
+                -webkit-animation-name: moving;
+                -moz-animation-name: moving;
+                -o-animation-name: moving;
+                animation-name: moving;
+
+                -webkit-animation-duration: 3s;
+                -moz-animation-duration: 3s;
+                -o-animation-duration: 3s;
+                animation-duration: 3s;
+
+                -webkit-animation-direction: normal;
+                -moz-animation-direction: normal;
+                -o-animation-direction: normal;
+                animation-direction: normal;
+
+                -webkit-animation-iteration-count: infinite;
+                -moz-animation-iteration-count: infinite;
+                -o-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+            }
+
+            @-webkit-keyframes moving {
+                from {
+                    width: 200px;
+                    background: #faef7c;
+                    opacity: 0.5;
+                    transform: scale(0.5) rotate(15deg);
+                }
+                to {
+                    width: 400px;
+                    background: #ff9400;
+                    opacity: 1;
+                    transform: scale(1) rotate(0deg);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h3>CSS3 Animation</h3>
+        </div>
+    </body>
+</html>
