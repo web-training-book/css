@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>rem</title>
+        <style>
+            /*
+            em의 단점은 중간에 기본값이 바뀐다.
+            em의 단점을 보완하기 위해 rem을 사용.
+            rem의 r은 root를 의미함.
+
+
+            */
+            html { font-size: 20px; }
+
+            #wrapper {
+                font-size: 12px;
+
+                width: 96%;
+                margin: 0 auto;
+            }
+            header {
+                width:100%;
+                height:120px;
+                background-color:#066cfa;
+                border-bottom:1px solid black;
+            }
+            .header-text {
+                font-size: 2rem; /* 부모요소가 12px이므로 24px */
+
+                color:white;
+                text-align:center;
+            }
+            .fluid-text {
+                font-size: 1.5rem; /* 부모요소가 24px이므로 36px */
+            }
+            .content {
+                font-size: 1.5rem;
+                line-height: 380px;
+                text-align: center;
+
+                float: left;
+                width:62.5%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#ffd800;
+            }
+            .right-side {
+                font-size: 1.5rem;
+                line-height: 120px;
+                text-align: center;
+
+                float:right;
+                width:31.25%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#00ff90;
+            }
+            footer {
+                font-size:1.5rem;
+                line-height: 120px;
+                text-align: center;
+
+                clear:both;
+                width:100%;
+                height:120px;
+                background-color:#c3590a;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="header-text">
+                <p>가변 그리드 레이아웃</p>
+                <p class="fluid-text">가변 폰트</p>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+        </div>
+    </body>
+</html>
