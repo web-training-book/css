@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>keyframes</title>
+        <style>
+            /*
+            애니메이션 지점 설정
+
+            @keyframes 이름 {
+                선택자 { 스타일 }
+            }
+
+            (팁)
+            from, 0%: 시작위치
+            to, 100%: 끝위치
+
+            중간위치는 50% 로 선택자를 지정
+            */
+
+            div {
+                width:100px;
+                height:100px;
+                background-color: blue;
+
+                -webkit-animation-name: change-bg;
+                -moz-animation-name: change-bg;
+                -o-animation-name: change-bg;
+                animation-name: change-bg;
+
+                -webkit-animation-duration: 3s;
+                -moz-animation-duration: 3s;
+                -o-animation-duration: 3s;
+                animation-duration: 3s;
+            }
+
+            @-webkit-keyframes change-bg {
+                from {
+                    background-color: blue;
+                    border: 1px solid black;
+                }
+                to {
+                    background-color: #a5d6ff;
+                    border-radius: 50%;
+                }
+            }
+            @-moz-keyframes change-bg {
+                from {
+                    background-color: blue;
+                    border: 1px solid black;
+                }
+                to {
+                    background-color: #a5d6ff;
+                    border-radius: 50%;
+                }
+            }
+            @-o-keyframes change-bg {
+                from {
+                    background-color: blue;
+                    border: 1px solid black;
+                }
+                to {
+                    background-color: #a6d6ff;
+                    border-radius: 50%;
+                }
+            }
+            @keyframes change-bg {
+                from {
+                    background-color: blue;
+                    border: 1px solid black;
+                }
+                to {
+                    background-color: #a6d6ff;
+                    border-radius: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div></div>
+    </body>
+</html>
