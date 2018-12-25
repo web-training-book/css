@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>em</title>
+        <style>
+            /*
+            em 단위는 부모요소에서 지정한 폰트의 대문자 M의 너비를 1em 으로 함.
+
+            글자크기(px) / 부모의글자크기(px) = em
+
+            em 단위를 사용하면 부모요소의 폰트크기에 따라 자식요소의 폰트크기가 바뀐다.
+            이렇게 하면 em 수치가 계속 달라진다는 단점이 있다.
+
+            wrapper, .header-text, .fluid-text 를 보면 그 단점을 알수 있다.
+            */
+
+            #wrapper {
+                font-size: 12px;
+
+                width: 96%;
+                margin: 0 auto;
+            }
+            header {
+                width:100%;
+                height:120px;
+                background-color:#066cfa;
+                border-bottom:1px solid black;
+            }
+            .header-text {
+                font-size: 2em;
+
+                color:white;
+                text-align:center;
+            }
+            .fluid-text {
+                font-size: 1.5em;
+            }
+            .content {
+                font-size: 1.5em;
+                line-height: 380px;
+                text-align: center;
+
+                float: left;
+                width:62.5%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#ffd800;
+            }
+            .right-side {
+                font-size: 1.5em;
+                line-height: 120px;
+                text-align: center;
+
+                float:right;
+                width:31.25%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#00ff90;
+            }
+            footer {
+                font-size:1.5em;
+                line-height: 120px;
+                text-align: center;
+
+                clear:both;
+                width:100%;
+                height:120px;
+                background-color:#c3590a;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header class="header-text">
+                <p>가변 그리드 레이아웃</p>
+                <p class="fluid-text">가변 폰트</p>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+        </div>
+    </body>
+</html>
