@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>max-width</title>
+        <style>
+            /*
+            가변이미지
+
+            width는 이미지 너비값이고
+            max-width는 가변이미지에서 최대한 표시할 수 있는 이미지 너비값
+            max-width:100% 로 지정하면, 원본이미지보다 커지지는 않는다.
+
+            (팁)
+            ie7이하에서는 max-width를 인식하지 못하기 때문에
+            width:100%로 지정, 하지만 원본이미지보다 커져셔 레이아웃을 망칠수 있음
+            */
+
+            #wrapper {
+                width:96%;
+                margin:0 auto;
+            }
+            header {
+                width:100%;
+                height:120px;
+                background-color:#066cfa;
+                border-bottom:1px solid black;
+            }
+            .header-text {
+                font-size:2rem;
+                color:white;
+                text-align:center;
+                line-height:120px;
+            }
+            .content {
+                float:left;
+                width:62.5%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#ffd800;
+            }
+            .content img {
+                max-width:100%;
+                height:auto;
+            }
+            .right-side {
+                float:right;
+                width:31.25%;
+                height:400px;
+                padding:1.5625%;
+                background-color:#00ff90;
+            }
+            footer {
+                clear:both;
+                width:100%;
+                height:120px;
+                background-color:#c3590a;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <header>
+                <h1 class="header-text">가변 그리드 레이아웃</h1>
+            </header>
+            <section class="content">
+                <h4>본문</h4>
+                <img src="images/fireworks.png">
+            </section>
+            <aside class="right-side">
+                <h4>사이드바</h4>
+            </aside>
+            <footer>
+                <h4>푸터</h4>
+            </footer>
+        </div>
+    </body>
+</html>
